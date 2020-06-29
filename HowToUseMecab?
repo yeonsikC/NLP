@@ -1,0 +1,24 @@
+윈도우 상에서 mecab을 설치하기 위한 방법을 안내하는 문서입니다.
+
+1. [https://github.com/Pusnow/mecab-ko-msvc/releases/tag/release-0.9.2-msvc-3](https://github.com/Pusnow/mecab-ko-msvc/releases/tag/release-0.9.2-msvc-3) 링크 클릭
+2. 윈도우 버전에 따라 32 or 64 bit 선택하여 다운로드
+3. 'C드라이브'에 mecab 폴더 만들기 -> "C:/mecab"
+4. 2번에서 다운로드 받은 'mecab-ko-msvc-x64.zip'을 mecab 폴더에 압축을 해제한다.
+
+5. [https://github.com/Pusnow/mecab-ko-dic-msvc/releases/tag/mecab-ko-dic-2.1.1-20180720-msvc](https://github.com/Pusnow/mecab-ko-dic-msvc/releases/tag/mecab-ko-dic-2.1.1-20180720-msvc) 링크 클릭
+6. 사전 다운로드 'mecab-ko-dic-msvc.zip'
+7. 4번과 마찬가지로 3번 폴더(mecab 폴더)에 압축을 해제한다.
+
+8. [최종폴더상태](C:\mecab\install_mecab.PNG)
+
+9. [https://github.com/Pusnow/mecab-python-msvc/releases/tag/mecab_python-0.996_ko_0.9.2_msvc-2](https://github.com/Pusnow/mecab-python-msvc/releases/tag/mecab_python-0.996_ko_0.9.2_msvc-2) 링크 클릭
+10. 파이썬 및 윈도우 버전에 맞는 whl 다운로드
+11. site-packages 폴더에 whl파일 이동. (e.g. C:\anaconda\Lib\site-package 폴더에 whl 이동)
+12. !pip install C:\anaconda\Lib\site-packages\mecab_python-0.996_ko_0.9.2_msvc-cp37-cp37m-win_amd64.whl 실행 (각자 경로 기입)
+
+13. mecab 실행하기
+
+import MeCab
+m = MeCab.Tagger()
+output = m.parse("아버지가방에들어가셨다")
+print(output)
